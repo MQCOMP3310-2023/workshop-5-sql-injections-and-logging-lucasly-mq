@@ -126,7 +126,9 @@ public class SQLiteConnectionManager {
      * @param word the word to store
      */
     public void addValidWord(int id, String word) {
-        //String sql = "INSERT INTO validWords(id,word) VALUES('" + id + "','" + word + "')";
+        // Bad SQL query.
+        // String sql = "INSERT INTO validWords(id,word) VALUES('" + id + "','" + word + "')";
+
         String sql = "INSERT INTO validWords(id, word) VALUES(?, ?)";
 
         try (Connection conn = DriverManager.getConnection(databaseURL);
